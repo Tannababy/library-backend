@@ -23,7 +23,7 @@ public class BookService {
         return books;
     }
 
-    public Optional<Book> getbookById(int id) {
+    public Optional<Book> getBookById(int id) {
         return repository.findById(id);
     }
 }

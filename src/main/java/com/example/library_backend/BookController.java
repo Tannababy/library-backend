@@ -28,6 +28,6 @@ public class BookController {
     @GetMapping("/books/{id}")
     public Optional<Book> getBookById(@PathVariable int id) {
         
-        return service.getbookById(id);
+        return service.getBookById(id);
     }
 }

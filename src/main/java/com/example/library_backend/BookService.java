@@ -3,6 +3,7 @@ package com.example.library_backend;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class BookService {
@@ -20,5 +21,9 @@ public class BookService {
         System.out.println(books);
 
         return books;
+    }
+
+    public Optional<Book> getbookById(int id) {
+        return repository.findById(id);
     }
 }

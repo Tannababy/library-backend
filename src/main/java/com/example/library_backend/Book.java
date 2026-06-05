@@ -13,4 +13,29 @@ public class Book {
     private String author;
     private String borrower;
     private boolean available;
+
+    public int getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getBorrower() {
+        return borrower;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public String toString() {
+
+        return "Id: " + this.getId() + ", Title: " + this.getTitle() + ", Author: " + this.getAuthor() + ", Borrower: " + this.getBorrower() + ", Available: " + this.isAvailable();
+    }
 }

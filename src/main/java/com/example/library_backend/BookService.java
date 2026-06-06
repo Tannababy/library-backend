@@ -26,4 +26,11 @@ public class BookService {
     public Optional<Book> getBookById(int id) {
         return repository.findById(id);
     }
+
+    public String saveBook(Book book) {
+
+        repository.save(book);
+
+        return "Book: " + book.getTitle() + ", by Author: " + book.getAuthor() + " was saved.";
+    }
 }

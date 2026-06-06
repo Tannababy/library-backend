@@ -1,9 +1,6 @@
 package com.example.library_backend;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,5 +26,11 @@ public class BookController {
     public Optional<Book> getBookById(@PathVariable int id) {
         
         return service.getBookById(id);
+    }
+
+    @PostMapping("/books")
+    public String saveBook(@RequestBody Book book) {
+
+        return service.saveBook(book);
     }
 }

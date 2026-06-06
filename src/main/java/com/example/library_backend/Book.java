@@ -13,6 +13,7 @@ public class Book {
     private String author;
     private String borrower;
     private boolean available;
+    private int borrowCount;
 
     public int getId() {
         return id;
@@ -28,6 +29,10 @@ public class Book {
 
     public String getBorrower() {
         return borrower;
+    }
+
+    public int getBorrowCount() {
+        return borrowCount;
     }
 
     public boolean isAvailable() {
@@ -52,6 +57,10 @@ public class Book {
 
     public void setAvailable(boolean available) {
         this.available = available;
+    }
+
+    public void setBorrowCount(int borrowCount) {
+        this.borrowCount = borrowCount;
     }
 
     public String toString() {

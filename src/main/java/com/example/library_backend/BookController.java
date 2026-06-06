@@ -28,6 +28,12 @@ public class BookController {
         return service.getBookById(id);
     }
 
+    @GetMapping("/loadBooks")
+    public void loadBooks() {
+
+        service.loadBooksFromJson();
+    }
+
     @PostMapping("/books")
     public String saveBook(@RequestBody Book book) {
 

@@ -94,4 +94,22 @@ public class BookService {
             System.out.println("Error reading file.");
         }
     }
+
+    public Book updateBook(int id, Book book) {
+
+        Book foundbook = repository.findById(id).orElseThrow();
+
+        if (foundbook.isAvailable()) {
+
+            foundbook.setAvailable(false);
+            foundbook.setBorrower(book.getBorrower());
+            foundbook.setBorrowCount(foundbook.getBorrowCount() + 1);
+        } else {
+
+            foundbook.setAvailable(true);
+            foundbook.setBorrower(null);
+        }
+
+        return repository.save(foundbook);
+    }
 }

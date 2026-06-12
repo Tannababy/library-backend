@@ -1,5 +1,7 @@
-package com.example.library_backend;
+package com.example.library_backend.service;
 
+import com.example.library_backend.model.Book;
+import com.example.library_backend.repository.BookRepository;
 import org.springframework.stereotype.Service;
 
 import org.json.JSONArray;

@@ -1,5 +1,8 @@
 package com.example.library_backend;
 
+import com.example.library_backend.model.Book;
+import com.example.library_backend.repository.BookRepository;
+import com.example.library_backend.service.BookService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

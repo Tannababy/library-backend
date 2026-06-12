@@ -1,4 +1,4 @@
-package com.example.library_backend;
+package com.example.library_backend.model;
 
 import jakarta.persistence.*;
 

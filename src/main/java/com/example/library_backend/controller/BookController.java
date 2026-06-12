@@ -1,13 +1,14 @@
-package com.example.library_backend;
+package com.example.library_backend.controller;
 
+import com.example.library_backend.model.Book;
+import com.example.library_backend.service.BookService;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/library_backend")
+@RequestMapping("/library_backend/books")
 public class BookController {
 
     private BookService service;
@@ -16,13 +17,13 @@ public class BookController {
         this.service = service;
     }
 
-    @GetMapping("/books")
+    @GetMapping("/")
     public List<Book> getAllBooks() {
 
         return service.getAllBooks();
     }
     
-    @GetMapping("/books/{id}")
+    @GetMapping("/{id}")
     public Optional<Book> getBookById(@PathVariable int id) {
         
         return service.getBookById(id);
@@ -34,13 +35,13 @@ public class BookController {
         service.loadBooksFromJson();
     }
 
-    @PostMapping("/books")
+    @PostMapping("/")
     public String saveBook(@RequestBody Book book) {
 
         return service.saveBook(book);
     }
 
-    @PutMapping("/books/{id}")
+    @PutMapping("/{id}")
     public Book updateBook(@PathVariable int id, @RequestBody Book book) {
 
         return service.updateBook(id, book);
